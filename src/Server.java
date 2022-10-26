@@ -51,6 +51,8 @@ public class Server extends JFrame {
                 jta.append("Host name is " + inetAddress.getHostName() + '\n');
                 jta.append("IP Address is " + inetAddress.getHostAddress() + '\n');
                 // Create and start a new thread for this session of two players
+                ThreadClass t = new ThreadClass(s);
+                t.start();
             }
         }
         catch (IOException ex) {
